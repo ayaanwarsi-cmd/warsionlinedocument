@@ -5,86 +5,203 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
 
 <header>
-    <div class="top-buttons">
-        <button class="lang-btn" onclick="switchLang()">EN / हिंदी</button>
-        <button class="theme-btn" onclick="toggleTheme()">🌞 / 🌙</button>
+  <div class="container navbar">
+    <div class="logo">
+      Warsi <span>Online Document</span>
     </div>
-
-    <h1 data-en="Contact Us" data-hi="संपर्क करें">
-        Contact Us
-    </h1>
-
-    <p data-en="Get in touch with Warsi Online Document"
-       data-hi="वर्सी ऑनलाइन डॉक्यूमेंट्स से संपर्क करें">
-        Get in touch with Warsi Online Document
+    <p class="tagline">
+      Government • Travel • Forex • Compliance • Business Solutions
     </p>
-
     <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="contact.html">Contact</a>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
     </nav>
+  </div>
 </header>
 
-<div class="container">
-
-    <h2 data-en="Contact Details" data-hi="संपर्क विवरण">
-        Contact Details
-    </h2>
-
-    <p>
-        <strong data-en="Office Address:" data-hi="कार्यालय पता:">
-            Office Address:
-        </strong><br>
-        241, MAIN PARWANA ROAD, KHUREJI KHAS, KRISHNA NAGAR, EAST DELHI-110051
-    </p>
-
-    <p>
-        <strong data-en="Email:" data-hi="ईमेल:">Email:</strong><br>
-        warsihelp@gmail.com
-    </p>
-
-    <!-- CALL BUTTONS -->
-    <div class="call-buttons">
-
-        <a href="tel:8860153142" class="call-card">
-            <span>📞</span>
-            <div>
-                <strong data-en="Call Now" data-hi="अभी कॉल करें">
-                    Call Now
-                </strong><br>
-                <small>8860153142</small>
-            </div>
-        </a>
-
-        <a href="tel:9315338439" class="call-card">
-            <span>📞</span>
-            <div>
-                <strong data-en="Call Now" data-hi="अभी कॉल करें">
-                    Call Now
-                </strong><br>
-                <small>9315338439</small>
-            </div>
-        </a>
-
-    </div>
-
+<!-- Moving Service Highlight -->
+<div class="service-ticker">
+  <div class="ticker-track">
+    ✈ Air Ticket Booking •
+    🌍 Visa Assistance •
+    💳 Credit Card Swipe Accepted •
+    💱 Licensed Currency Exchange •
+    📑 GST & ITR Filing •
+    🏢 Company Registration •
+    🖊 Digital Signature (DSC) •
+    🌐 IEC Code Registration •
+    ™ Trademark Registration •
+    🍽 FSSAI Registration •
+    🧾 Professional Tax Registration •
+    🛂 Immigration Consultancy •
+  </div>
 </div>
 
-<a class="whatsapp" href="https://wa.me/918860153142" target="_blank">
-    WhatsApp
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <h1>Contact Us</h1>
+    <p>We are here to assist you with all your documentation & financial needs.</p>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="section section-pattern">
+  <div class="container services-grid">
+
+    <!-- LEFT SIDE INFO -->
+    <div class="service-card form-animate">
+      <h3><i class="fa-solid fa-location-dot"></i> Office Address</h3>
+      <p>
+        241, Main Parwana Road,<br>
+        Khureji Khas, Krishna Nagar,<br>
+        East Delhi - 110051
+      </p>
+
+      <hr style="margin:20px 0;">
+
+      <h3><i class="fa-solid fa-clock"></i> Office Timings</h3>
+      <p>
+        Monday – Saturday: 10:00 AM – 9:30 PM<br>
+        Sunday: 11:00 AM – 4:00 PM
+      </p>
+
+      <hr style="margin:20px 0;">
+
+      <h3><i class="fa-solid fa-envelope"></i> Email</h3>
+      <p>warsihelp707@gmail.com</p>
+
+      <hr style="margin:20px 0;">
+
+      <h3><i class="fa-solid fa-phone"></i> Phone Numbers</h3>
+      <p>8860153142<br>9315338439</p>
+
+      <div style="margin-top:20px;">
+        <a href="tel:8860153142" class="btn btn-primary">Call Now</a>
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE FORM -->
+    <div class="service-card form-animate">
+      <h3><i class="fa-solid fa-paper-plane"></i> Send Inquiry</h3>
+
+      <form id="whatsappForm">
+
+        <input type="text" id="name" placeholder="Full Name" required>
+        <input type="tel" id="mobile" placeholder="Mobile Number" required>
+
+        <select id="service" required>
+          <option value="">Select Service</option>
+          <option>Aadhaar / PAN Service</option>
+          <option>Passport / Visa</option>
+          <option>Currency Exchange</option>
+          <option>GST / Tax Filing</option>
+          <option>Business Registration</option>
+          <option>Money Transfer</option>
+          <option>DSC / IEC / Trademark</option>
+          <option>Immigration Consultancy</option>
+          <option>Other</option>
+        </select>
+
+        <textarea id="message" rows="4"
+          placeholder="Additional Details"></textarea>
+
+        <button type="submit" class="btn btn-primary"
+          style="width:100%; margin-top:10px;">
+          Send via WhatsApp
+        </button>
+
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<!-- GOOGLE MAP SECTION -->
+<section class="section">
+  <div class="container">
+    <h2 style="text-align:center; margin-bottom:30px;">
+      Find Us on Google Maps
+    </h2>
+
+    <div style="border-radius:16px; overflow:hidden;">
+      <iframe
+        src="https://www.google.com/maps?q=241,+Main+Parwana+Road,+Khureji+Khas,+Krishna+Nagar,+East+Delhi+-+110051&output=embed"
+        width="100%"
+        height="350"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<a href="https://wa.me/918860153142"
+   target="_blank"
+   class="whatsapp-float">
+   WhatsApp
 </a>
 
+<!-- Success Confirmation Popup -->
+<div class="success-popup" id="successPopup">
+  <div class="success-box">
+    <div class="success-icon">
+      <i class="fa-solid fa-check"></i>
+    </div>
+    <h3>Inquiry Submitted Successfully!</h3>
+    <p>Redirecting you to WhatsApp...</p>
+  </div>
+</div>
+
 <footer>
-    © 2026 Warsi Online Document
+  © 2026 Warsi Online Document
 </footer>
+
+<script>
+document.getElementById("whatsappForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  let name = document.getElementById("name").value;
+  let mobile = document.getElementById("mobile").value;
+  let service = document.getElementById("service").value;
+  let message = document.getElementById("message").value;
+
+  let whatsappMessage =
+    "New Service Inquiry:%0A%0A" +
+    "Name: " + name + "%0A" +
+    "Mobile: " + mobile + "%0A" +
+    "Service: " + service + "%0A" +
+    "Details: " + message;
+
+  let whatsappURL =
+    "https://wa.me/918860153142?text=" + whatsappMessage;
+
+  // Show success animation
+  document.getElementById("successPopup").style.display = "flex";
+
+  // Redirect after 2 seconds
+  setTimeout(function() {
+    window.open(whatsappURL, "_blank");
+    document.getElementById("successPopup").style.display = "none";
+  }, 2000);
+});
+</script>
 
 </body>
 </html>
