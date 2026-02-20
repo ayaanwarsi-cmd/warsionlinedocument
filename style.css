@@ -567,3 +567,29 @@ nav a:hover::after {
     opacity: 1;
   }
 }
+/* Office Timing Styling */
+
+.timing-box div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.timing-box strong {
+  color: #0f172a;
+}
+
+.timing-box span {
+  color: #dc2626;
+  font-weight: 600;
+}
+
+/* Privacy Note */
+
+.privacy-note {
+  font-size: 12px;
+  color: #64748b;
+  margin-top: 10px;
+  text-align: center;
+}
