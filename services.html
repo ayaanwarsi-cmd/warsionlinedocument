@@ -1,256 +1,418 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <title>Services - Warsi Online Document</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services | Warsi Online Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-<link rel="stylesheet"
- href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
 </head>
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 900,
-    once: true
-  });
-</script>
 
 <body>
 
+<!-- ================= HEADER ================= -->
 <header>
-    <div class="top-buttons">
-        <button class="lang-btn" onclick="switchLang()">EN / हिंदी</button>
-        <button class="theme-btn" onclick="toggleTheme()">🌞 / 🌙</button>
+  <div class="container navbar">
+    <div class="logo">
+      Warsi <span>Online Document</span>
     </div>
-
-    <h1 data-en="Our Services" data-hi="हमारी सेवाएं">
-        Our Services
-    </h1>
-
-    <p data-en="Complete Online, Government & Travel Services"
-       data-hi="सभी ऑनलाइन, सरकारी और ट्रैवल सेवाएं">
-        Complete Online, Government & Travel Services
+    <p class="tagline">
+      Government • Travel • Forex • Compliance • Business Solutions
     </p>
-
     <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="contact.html">Contact</a>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
     </nav>
+  </div>
 </header>
 
-<div class="container">
 
-<h2 data-en="All Services Available" data-hi="सभी सेवाएं उपलब्ध">
-    All Services Available
-</h2>
-
-<input type="text" id="serviceSearch"
- placeholder="Search services..."
- onkeyup="filterServices()"
- class="service-search">
-
-<p style="
-text-align:center;
-font-weight:bold;
-margin:20px 0;
-color:#c33764;">
-💳 Card Swipe • 🏦 Bank Transfer • 💵 Cash Payment  
-<br>
-Available 24×7 | All Major Cards Accepted
-</p>
-
-
-<div class="services">
-
-<div class="card service-item" data-aos="fade-up">
-<h3><i class="fa-solid fa-id-card"></i> Aadhaar Card Services</h3>
-<ul>
-<li>New Aadhaar Enrollment</li>
-<li>Name / Address / Mobile Update</li>
-<li>DOB & Father Name Correction</li>
-<li>Biometric Update</li>
-</ul>
+<!-- Moving Service Highlight -->
+<div class="service-ticker">
+  <div class="ticker-track">
+    ✈ Air Ticket Booking •
+    🌍 Visa Assistance •
+    💳 Credit Card Swipe Accepted •
+    💱 Licensed Currency Exchange •
+    📑 GST & ITR Filing •
+    🏢 Company Registration •
+    🖊 Digital Signature (DSC) •
+    🌐 IEC Code Registration •
+    ™ Trademark Registration •
+    🍽 FSSAI Registration •
+    🧾 Professional Tax Registration •
+    🛂 Immigration Consultancy •
+  </div>
 </div>
 
-<div class="card service-item">
-<h3><i class="fa-solid fa-address-card"></i> PAN Card Services</h3>
-<ul>
-<li>New PAN Card</li>
-<li>PAN Correction / Duplicate</li>
-<li>Lost PAN Reprint</li>
-</ul>
-</div>
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="container">
+    <h1>Our Complete Services</h1>
+    <p>Government • Travel • Banking • Forex • Business • Online Services</p>
+  </div>
+</section>
 
-<div class="card service-item">
-<h3><i class="fa-solid fa-link"></i> Aadhaar – PAN Linking</h3>
-<ul>
-<li>Aadhaar PAN Linking</li>
-<li>Link Error Correction</li>
-</ul>
-</div>
+<!-- ================= GOVERNMENT DOCUMENT SERVICES ================= -->
+<section class="section section-pattern">
+  <div class="container">
+    <h2><i class="fa-solid fa-id-card"></i> Government Document Services</h2>
 
-<div class="card service-item">
-<h3><i class="fa-solid fa-person-booth"></i> Voter ID Services</h3>
-<ul>
-<li>New Voter ID</li>
-<li>Name & Address Change</li>
-<li>Voter Transfer</li>
-</ul>
-</div>
+    <div class="services-grid">
 
-<div class="card service-item">
-<h3><i class="fa-solid fa-car"></i> Driving License</h3>
-<ul>
-<li>New Driving License</li>
-<li>DL Renewal</li>
-<li>Address Change in DL</li>
-<li>Duplicate DL</li>
-<li>Learner License (LL) Apply</li>
-</ul>
-</div>
+      <div class="service-card">
+        <h3>Aadhaar Card Services</h3>
+        <ul>
+          <li>New Aadhaar Enrollment</li>
+          <li>Name / Address / Mobile Update</li>
+          <li>DOB & Father Name Correction</li>
+          <li>Biometric Update</li>
+          <li>Aadhaar PVC Card Printing</li>
+        </ul>
+      </div>
 
-<div class="card service-item" data-aos="fade-up">
-<h3><i class="fa-solid fa-motorcycle"></i> RC & Vehicle Services</h3>
-<ul>
-<li>RC Transfer (Car / Bike)</li>
-<li>Second Owner Transfer</li>
-<li>Address Change in RC</li>
-<li>Duplicate RC</li>
-<li>Hypothecation (HP) Removal</li>
-</ul>
-</div>
+      <div class="service-card">
+        <h3>PAN Card Services</h3>
+        <ul>
+          <li>New PAN Card Apply</li>
+          <li>PAN Correction</li>
+          <li>Duplicate / Lost PAN Reprint</li>
+          <li>PAN PVC Card Printing</li>
+          <li>Aadhaar-PAN Linking</li>
+        </ul>
+      </div>
 
+      <div class="service-card">
+        <h3>Voter ID Services</h3>
+        <ul>
+          <li>New Voter ID Apply</li>
+          <li>Name & Address Change</li>
+          <li>Voter Transfer</li>
+          <li>Voter PVC Card Printing</li>
+        </ul>
+      </div>
 
-<div class="card service-item" data-aos="fade-up">
-<h3><i class="fa-solid fa-passport"></i> Passport Services</h3>
-<ul>
-<li>New Passport Apply</li>
-<li>Passport Renewal</li>
-<li>Address Change in Passport</li>
-<li>Minor Passport</li>
-<li>Appointment Booking Assistance</li>
-</ul>
-</div>
+      <div class="service-card">
+        <h3>Driving License Services</h3>
+        <ul>
+          <li>New Driving License</li>
+          <li>DL Renewal</li>
+          <li>Address Change in DL</li>
+          <li>Duplicate DL</li>
+          <li>Learner License (LL)</li>
+          <li>DL PVC Card Printing</li>
+        </ul>
+      </div>
 
-<div class="card service-item">
-<h3><i class="fa-solid fa-building-columns"></i> Banking Services</h3>
-<ul>
-<li>Zero Balance Account</li>
-<li>Savings Account</li>
-<li>Money Transfer</li>
-<li>Withdraw Cash from Account</li>
-</ul>
-</div>
+      <div class="service-card">
+        <h3>RC & Vehicle Services</h3>
+        <ul>
+          <li>RC Transfer (Car / Bike)</li>
+          <li>Second Owner Transfer</li>
+          <li>Address Change in RC</li>
+          <li>Duplicate RC</li>
+          <li>Hypothecation (HP) Removal</li>
+        </ul>
+      </div>
 
-<div class="card service-item" data-aos="fade-up">
-<h3><i class="fa-solid fa-credit-card"></i> Credit card Payment & Swipe Services</h3>
-<ul>
-<li>Credit Card Swipe Available</li>
-<li>Visa / MasterCard / Discover Cards Accepted</li>
-<li>Business & Standard Cards Accepted</li>
-<li>24×7 Payment Facility Available</li>
-</ul>
-</div>
+    </div>
+  </div>
+</section>
 
-<div class="card service-item" data-aos="fade-up">
-<h3><i class="fa-solid fa-money-bill-transfer"></i> Payment Options</h3>
-<ul>
-<li>Direct Bank Account Transfer</li>
-<li>UPI / Online Payment</li>
-<li>Cash in Hand Accepted</li>
-<li>Secure & Instant Payment</li>
-</ul>
-</div>
+<!-- ================= TRAVEL & VISA ================= -->
+<section class="section section-gray">
+  <div class="container">
+    <h2><i class="fa-solid fa-plane-departure"></i> Travel & Visa Services</h2>
 
-<div class="card service-item">
-<h3><i class="fa-solid fa-ticket"></i> Ticket Booking</h3>
-<ul>
-<li>Train Tickets</li>
-<li>Flight Tickets</li>
-<li>Domestic & International</li>
-</ul>
-</div>
+    <div class="services-grid">
 
-<!-- VISA WITH MULTIPLE COUNTRY IMAGES -->
-<div class="card service-item">
-<h3><i class="fa-solid fa-plane-departure"></i> Visa Services</h3>
+      <div class="service-card">
+        <h3>Passport Services</h3>
+        <ul>
+          <li>New Passport Apply</li>
+          <li>Passport Renewal</li>
+          <li>Address Change</li>
+          <li>Minor Passport</li>
+          <li>Appointment Booking Assistance</li>
+        </ul>
+      </div>
 
-<div class="visa-images">
-<img src="https://flagcdn.com/w80/us.png">
-<img src="https://flagcdn.com/w80/ca.png">
-<img src="https://flagcdn.com/w80/gb.png">
-<img src="https://flagcdn.com/w80/au.png">
-<img src="https://flagcdn.com/w80/ae.png">
-</div>
+      <div class="service-card">
+        <h3>Visa Services</h3>
+        <ul>
+          <li>Tourist Visa</li>
+          <li>Business Visa</li>
+          <li>Student Visa</li>
+          <li>All Countries Visa Assistance</li>
+        </ul>
+      </div>
 
-<ul>
-<li>Tourist Visa</li>
-<li>Business Visa</li>
-<li>Student Visa</li>
-<li>All Countries Visa</li>
-</ul>
-</div>
+      <div class="service-card">
+        <h3>Ticket & Travel Assistance</h3>
+        <ul>
+          <li>Train Ticket Booking</li>
+          <li>Flight Tickets (Domestic & International)</li>
+          <li>Hotel Booking</li>
+          <li>Travel Insurance Assistance</li>
+        </ul>
+      </div>
 
+    </div>
+  </div>
+</section>
 
-<div class="card service-item">
-<h3><i class="fa-solid fa-credit-card"></i> PVC Card Printing</h3>
-<ul>
-<li>Aadhaar PVC</li>
-<li>PAN PVC</li>
-<li>Voter PVC</li>
-<li>DL PVC</li>
-</ul>
-</div>
+<!-- ================= FOREX & MONEY TRANSFER ================= -->
+<section class="section section-dark">
+  <div class="container">
+    <h2><i class="fa-solid fa-money-bill-transfer"></i> Licensed Forex & Money Transfer</h2>
+    <div class="forex-badge">
+      <i class="fa-solid fa-shield-halved"></i>
+      Officially Licensed Currency Exchange Service
+    </div>
+    <div class="services-grid">
 
-<div class="card service-item">
-<h3><i class="fa-solid fa-file-pen"></i> Online Form Services</h3>
-<ul>
-<li>Govt Job Forms</li>
-<li>School / College Admission</li>
-<li>EWS Forms</li>
-</ul>
-</div>
+      <div class="service-card">
+        <h3>Currency Exchange (Licensed)</h3>
+        <ul>
+          <li>Buy Foreign Currency</li>
+          <li>Sell Foreign Currency</li>
+          <li>Major Global Currencies Available</li>
+          <li>Competitive Exchange Rates</li>
+        </ul>
+      </div>
 
+      <div class="service-card">
+        <h3>Money Transfer Services</h3>
+        <ul>
+          <li>Western Union Support</li>
+          <li>Domestic Money Transfer</li>
+          <li>International Remittance</li>
+          <li>Secure Transfer Assistance</li>
+        </ul>
+      </div>
 
-<div class="card service-item">
-<h3><i class="fa-solid fa-file-certificate"></i> Certificate Services</h3>
-<ul>
-<li>Birth Certificate</li>
-<li>Death Certificate</li>
-<li>Income / Domicile</li>
-<li>Marriage Certificate</li>
-</ul>
-</div>
+    </div>
+  </div>
+</section>
 
-<div class="card service-item">
-<h3><i class="fa-solid fa-file-contract"></i> Affidavit Services</h3>
-<ul>
-<li>Name Change Affidavit</li>
-<li>Address Proof Affidavit</li>
-<li>DOB Affidavit</li>
-</ul>
-</div>
+<!-- ================= BANKING & PAYMENT ================= -->
+<section class="section section-pattern">
+  <div class="container">
+    <h2><i class="fa-solid fa-building-columns"></i> Banking & Payment Services</h2>
 
-</div>
+    <div class="services-grid">
 
+      <div class="service-card">
+        <h3>Banking Services</h3>
+        <ul>
+          <li>Zero Balance Account</li>
+          <li>Savings Account</li>
+          <li>Money Transfer</li>
+          <li>Cash Withdrawal</li>
+        </ul>
+      </div>
 
-</div>
-</div>
+      <div class="service-card">
+        <h3>Payment Options</h3>
+        <ul>
+          <li>Credit Card Swipe</li>
+          <li>Visa / MasterCard Accepted</li>
+          <li>UPI / Online Transfer</li>
+          <li>Direct Bank Transfer</li>
+          <li>Cash Payment Accepted</li>
+        </ul>
+      </div>
 
-<a class="whatsapp" href="https://wa.me/918860153142" target="_blank">
-WhatsApp
+    </div>
+  </div>
+</section>
+
+<!-- ================= BUSINESS & TAX ================= -->
+<section class="section section-gray">
+  <div class="container">
+    <h2><i class="fa-solid fa-briefcase"></i> Business & Tax Services</h2>
+
+    <div class="services-grid">
+
+      <div class="service-card">
+        <h3>GST & Income Tax Services</h3>
+        <ul>
+          <li>GST Registration Assistance</li>
+          <li>Income Tax Return Filing</li>
+          <li>Compliance Support</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <h3>Business Registration Services</h3>
+        <ul>
+          <li>MSME / Udyam Registration</li>
+          <li>Company Registration Guidance</li>
+          <li>Partnership Firm Registration</li>
+          <li>Trade License Assistance</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= ONLINE & CERTIFICATE ================= -->
+<section class="section section-pattern">
+  <div class="container">
+    <h2><i class="fa-solid fa-file-lines"></i> Online & Certificate Services</h2>
+
+    <div class="services-grid">
+
+      <div class="service-card">
+        <h3>Online Form Services</h3>
+        <ul>
+          <li>Government Job Forms</li>
+          <li>School / College Admission Forms</li>
+          <li>EWS Forms</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <h3>Certificate & Affidavit Services</h3>
+        <ul>
+          <li>Birth Certificate</li>
+          <li>Death Certificate</li>
+          <li>Income / Domicile Certificate</li>
+          <li>Marriage Certificate</li>
+          <li>Name Change Affidavit</li>
+          <li>Address Proof Affidavit</li>
+          <li>DOB Affidavit</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= COMPLIANCE & REGISTRATION ================= -->
+<section class="section section-gray">
+  <div class="container">
+    <h2><i class="fa-solid fa-scale-balanced"></i> Compliance & Registration Services</h2>
+
+    <div class="services-grid">
+
+      <div class="service-card">
+        <h3>Digital Signature Certificate (DSC)</h3>
+        <ul>
+          <li>Class 3 DSC</li>
+          <li>Individual & Company DSC</li>
+          <li>Renewal & Reissue</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <h3>Import Export Code (IEC)</h3>
+        <ul>
+          <li>New IEC Registration</li>
+          <li>IEC Modification</li>
+          <li>DGFT Assistance</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <h3>Trademark Registration</h3>
+        <ul>
+          <li>Trademark Search</li>
+          <li>Application Filing</li>
+          <li>Renewal & Objection Handling</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <h3>FSSAI Registration</h3>
+        <ul>
+          <li>Basic Registration</li>
+          <li>State License</li>
+          <li>Central License</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <h3>Professional Tax Registration</h3>
+        <ul>
+          <li>PT Registration</li>
+          <li>Compliance Filing</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <h3>Immigration Consultancy</h3>
+        <ul>
+          <li>Study Visa Guidance</li>
+          <li>Work Permit Assistance</li>
+          <li>Migration Guidance</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHATSAPP FLOAT ================= -->
+<a href="https://wa.me/918860153142" target="_blank" class="whatsapp-float">
+  WhatsApp
 </a>
 
+<!-- ================= FOOTER ================= -->
 <footer>
-    © 2026 Warsi Online Document
+  © 2026 Warsi Online Document | All Rights Reserved
 </footer>
 
+<script src="script.js"></script>
+
+<!-- ================= MOBILE CALL BAR ================= -->
+<div class="mobile-call-bar">
+  <a href="tel:8860153142">
+    <i class="fa-solid fa-phone"></i> Call Now
+  </a>
+</div>
+<!-- ================= SERVICE INQUIRY MODAL ================= -->
+<div class="modal-overlay" id="serviceModal">
+  <div class="modal-box">
+
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+
+    <h2>Service Inquiry</h2>
+    <p style="margin-bottom:20px;">
+      Fill in your details and we will contact you shortly.
+    </p>
+
+    <form>
+      <input type="text" placeholder="Full Name" required>
+      <input type="tel" placeholder="Mobile Number" required>
+      <select required>
+        <option value="">Select Service</option>
+        <option>Aadhaar / PAN Service</option>
+        <option>Passport / Visa</option>
+        <option>Currency Exchange</option>
+        <option>GST / Tax Filing</option>
+        <option>Business Registration</option>
+        <option>Money Transfer</option>
+        <option>Other</option>
+      </select>
+      <textarea placeholder="Additional Details" rows="3"></textarea>
+
+      <button type="submit" class="btn btn-primary" style="width:100%; margin-top:10px;">
+        Submit Inquiry
+      </button>
+    </form>
+
+  </div>
+</div>
 </body>
 </html>
