@@ -1,127 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Warsi Online Document</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Warsi Online Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- AOS CSS -->
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet"
+   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
 
+<!-- ================= HEADER ================= -->
 <header>
-    <div class="top-buttons">
-        <button class="lang-btn" onclick="switchLang()">EN / हिंदी</button>
-        <button class="theme-btn" onclick="toggleTheme()">🌞 / 🌙</button>
+  <div class="container navbar">
+    <div class="logo">
+      Warsi <span>Online Document</span>
     </div>
-
-    <h1>Warsi Online Document</h1>
-    <p>All Online, Government & Travel Services Under One Roof</p>
-
+    <p class="tagline">
+      Government • Travel • Forex • Compliance • Business Solutions
+    </p>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="contact.html">Contact</a>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
     </nav>
+  </div>
 </header>
 
-<!-- HERO -->
-<section class="hero" data-aos="fade-up">
-    <div class="hero-content">
-        <h1>Fast & Trusted Online Services</h1>
-        <p>Aadhaar, PAN, Voter ID, Tickets, Visa, Banking & More</p>
+<!-- Moving Service Highlight -->
+<div class="service-ticker">
+  <div class="ticker-track">
+    ✈ Air Ticket Booking •
+    🌍 Visa Assistance •
+    💳 Credit Card Swipe Accepted •
+    💱 Licensed Currency Exchange •
+    📑 GST & ITR Filing •
+    🏢 Company Registration •
+    🖊 Digital Signature (DSC) •
+    🌐 IEC Code Registration •
+    ™ Trademark Registration •
+    🍽 FSSAI Registration •
+    🧾 Professional Tax Registration •
+    🛂 Immigration Consultancy •
+  </div>
+</div>
 
-        <div class="hero-buttons">
-            <a href="tel:8860153142" class="btn primary">Call Now</a>
-            <a href="https://wa.me/918860153142" target="_blank" class="btn secondary">
-                WhatsApp Us
-            </a>
-        </div>
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="container">
+    <h1>Hassle-Free Government & Travel Documentation</h1>
+    <p>
+      Trusted for 
+      <span id="typing-text" style="color:#dc2626; font-weight:600;"></span>
+    </p>
+
+    <div class="hero-buttons">
+      <a href="tel:8860153142" class="btn btn-primary">Call Now</a>
+      <a href="https://wa.me/918860153142" target="_blank" class="btn btn-outline">
+        WhatsApp Us
+      </a>
     </div>
+
+    <!-- ✅ Inquiry Button Added -->
+    <div style="margin-top:20px;">
+      <button class="btn btn-primary" onclick="openModal()">
+        Request Service Inquiry
+      </button>
+    </div>
+
+  </div>
 </section>
 
-<!-- LOTTIE (PREMIUM) -->
-<lottie-player
-  src="https://assets10.lottiefiles.com/packages/lf20_touohxv0.json"
-  background="transparent"
-  speed="1"
-  style="width:300px; height:300px; margin:30px auto;"
-  loop autoplay>
-</lottie-player>
+<!-- ================= TRUST STRIP (KEEP THIS) ================= -->
+<section class="trust-strip">
+  <div class="container trust-items">
 
-<div class="container">
+    <div class="trust-item">
+      <h3>5000+</h3>
+      <p>Happy Customers</p>
+    </div>
 
-<!-- STATS -->
-<h2 data-aos="fade-up">Our Achievements</h2>
+    <div class="trust-item">
+      <h3>10+ Years</h3>
+      <p>Experience</p>
+    </div>
 
-<div class="stats">
+    <div class="trust-item">
+      <h3>55+</h3>
+      <p>Services Offered</p>
+    </div>
 
-  <div class="stat-card" data-aos="zoom-in">
-    <h3><span class="count" data-target="5000">0</span>+</h3>
-    <p>Happy Customers</p>
+    <div class="trust-item">
+      <h3>100%</h3>
+      <p>Transparent Pricing</p>
+    </div>
+
   </div>
+</section>
 
-  <div class="stat-card" data-aos="zoom-in">
-    <h3><span class="count" data-target="10">0</span>+</h3>
-    <p>Years Experience</p>
+<!-- ================= CORE SERVICES ================= -->
+<section class="section">
+  <div class="container">
+    <h2 style="text-align:center; margin-bottom:40px;">
+      Our Core Services
+    </h2>
+
+    <div class="services-grid">
+
+      <div class="service-card">
+        <h3>Government ID Services</h3>
+        <p>
+          Aadhaar Card, PAN Card, Voter ID, Driving License,
+          RC Transfer, Corrections & Updates.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Passport & Visa Services</h3>
+        <p>
+          New Passport, Renewal, Minor Passport,
+          Tourist & Business Visa Assistance.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Banking & Payment Services</h3>
+        <p>
+          Zero Balance Account, Money Transfer,
+          Credit Card Swipe, UPI & Secure Payments.
+        </p>
+      </div>
+
+    </div>
   </div>
+</section>
 
-  <div class="stat-card" data-aos="zoom-in">
-    <h3><span class="count" data-target="55">0</span>+</h3>
-    <p>Services Offered</p>
+<!-- ================= WHY CHOOSE US ================= -->
+<section class="section" style="background:#f1f5f9;">
+  <div class="container">
+    <h2 style="text-align:center; margin-bottom:40px;">
+      Why Choose Us
+    </h2>
+
+    <div class="services-grid">
+
+      <div class="service-card">
+        <h3>One Stop Solution</h3>
+        <p>All documentation, travel & banking services under one roof.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Trusted & Genuine</h3>
+        <p>Transparent pricing with honest and accurate work.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Quick Support</h3>
+        <p>Call & WhatsApp support available for fast assistance.</p>
+      </div>
+
+    </div>
   </div>
+</section>
 
-</div>
-
-<h2 data-aos="fade-up">Why Choose Us</h2>
-
-<div class="why-us">
-    <div class="why-card" data-aos="fade-right">
-        <h3><i class="fa-solid fa-building"></i> One Stop Solution</h3>
-        <p>All services under one roof</p>
-    </div>
-
-    <div class="why-card" data-aos="fade-left">
-        <h3><i class="fa-solid fa-shield-halved"></i> Trusted</h3>
-        <p>Genuine & transparent work</p>
-    </div>
-
-    <div class="why-card" data-aos="fade-right">
-        <h3><i class="fa-solid fa-tags"></i> Best Rates</h3>
-        <p>No hidden charges</p>
-    </div>
-
-    <div class="why-card" data-aos="fade-left">
-        <h3><i class="fa-solid fa-headset"></i> Quick Support</h3>
-        <p>Call & WhatsApp support</p>
-    </div>
-</div>
-
-</div>
-
-<a class="whatsapp" href="https://wa.me/918860153142" target="_blank">
-    WhatsApp
+<!-- ================= WHATSAPP FLOAT ================= -->
+<a href="https://wa.me/918860153142" target="_blank" class="whatsapp-float">
+  WhatsApp
 </a>
 
-<footer>© 2026 Warsi Online Document</footer>
+<!-- ================= FOOTER ================= -->
+<footer>
+  © 2026 Warsi Online Document | All Rights Reserved
+</footer>
 
-<!-- AOS + LOTTIE JS (CORRECT PLACE) -->
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init({ duration: 900, once: true });
-</script>
+<!-- ================= MOBILE CALL BAR ================= -->
+<div class="mobile-call-bar">
+  <a href="tel:8860153142">
+    <i class="fa-solid fa-phone"></i> Call Now
+  </a>
+</div>
 
-<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<!-- ================= SERVICE INQUIRY MODAL ================= -->
+<div class="modal-overlay" id="serviceModal">
+  <div class="modal-box">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+
+    <h2>Service Inquiry</h2>
+    <p style="margin-bottom:20px;">
+      Fill in your details and we will contact you shortly.
+    </p>
+
+    <form>
+      <input type="text" placeholder="Full Name" required>
+      <input type="tel" placeholder="Mobile Number" required>
+
+      <select required>
+        <option value="">Select Service</option>
+        <option>Aadhaar / PAN Service</option>
+        <option>Passport / Visa</option>
+        <option>Currency Exchange</option>
+        <option>GST / Tax Filing</option>
+        <option>Business Registration</option>
+        <option>Money Transfer</option>
+        <option>Other</option>
+      </select>
+
+      <textarea placeholder="Additional Details" rows="3"></textarea>
+
+      <button type="submit" class="btn btn-primary" style="width:100%; margin-top:10px;">
+        Submit Inquiry
+      </button>
+    </form>
+  </div>
+</div>
+
+<script src="script.js"></script>
 
 </body>
 </html>
