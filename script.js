@@ -1,134 +1,97 @@
-// Sticky Navbar effect
+// ============================================================
+//  WARSI ONLINE DOCUMENT — script.js
+// ============================================================
+
+/* ---- Sticky Header ---- */
 const header = document.querySelector("header");
+if (header) {
+  window.addEventListener("scroll", () => {
+    header.classList.toggle("scrolled", window.scrollY > 20);
+  });
+}
 
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 20) {
-    header.classList.add("scrolled");
-  } else {
-    header.classList.remove("scrolled");
-  }
-});
-
-// Reveal animation
-const cards = document.querySelectorAll('.service-card');
-
-function revealCards() {
-  const triggerBottom = window.innerHeight * 0.85;
-
-  cards.forEach(card => {
-    const cardTop = card.getBoundingClientRect().top;
-
-    if (cardTop < triggerBottom) {
-      card.classList.add('show');
+/* ---- Scroll Reveal (service-card & why-card) ---- */
+function revealOnScroll() {
+  const trigger = window.innerHeight * 0.88;
+  document.querySelectorAll(".service-card, .why-card, .trust-card, .form-animate").forEach(el => {
+    if (el.getBoundingClientRect().top < trigger) {
+      el.classList.add("show");
     }
   });
 }
 
-window.addEventListener('scroll', revealCards);
-window.addEventListener('load', revealCards);
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
 
-// Animated Counter
-const counters = document.querySelectorAll(".counter");
-
-function runCounter() {
-  counters.forEach(counter => {
-    const update = () => {
-      const target = +counter.getAttribute("data-target");
-      const current = +counter.innerText;
-      const increment = Math.ceil(target / 100);
-
-      if (current < target) {
-        counter.innerText = current + increment;
-        setTimeout(update, 20);
-      } else {
-        counter.innerText = target;
-      }
-    };
-    update();
+/* ---- Stagger card animations ---- */
+window.addEventListener("load", () => {
+  document.querySelectorAll(".services-grid").forEach(grid => {
+    grid.querySelectorAll(".service-card").forEach((card, i) => {
+      card.style.transitionDelay = (i * 0.07) + "s";
+    });
   });
-}
-
-let counterStarted = false;
-
-window.addEventListener("scroll", () => {
-  const statsSection = document.querySelector(".stat-card");
-  if (!statsSection) return;
-
-  const top = statsSection.getBoundingClientRect().top;
-  if (top < window.innerHeight && !counterStarted) {
-    runCounter();
-    counterStarted = true;
-  }
 });
-// Modal Control
+
+/* ---- Modal ---- */
 function openModal() {
-  document.getElementById("serviceModal").style.display = "flex";
+  const modal = document.getElementById("serviceModal");
+  if (modal) modal.style.display = "flex";
 }
 
 function closeModal() {
-  document.getElementById("serviceModal").style.display = "none";
+  const modal = document.getElementById("serviceModal");
+  if (modal) modal.style.display = "none";
 }
 
 window.addEventListener("click", function(e) {
   const modal = document.getElementById("serviceModal");
-  if (e.target === modal) {
-    modal.style.display = "none";
-  }
+  if (modal && e.target === modal) modal.style.display = "none";
 });
-// Contact form animation
-const formElement = document.querySelector(".form-animate");
 
-function revealForm() {
-  if (!formElement) return;
+window.addEventListener("keydown", function(e) {
+  if (e.key === "Escape") closeModal();
+});
 
-  const top = formElement.getBoundingClientRect().top;
-  if (top < window.innerHeight - 100) {
-    formElement.classList.add("show");
-  }
-}
-
-window.addEventListener("scroll", revealForm);
-window.addEventListener("load", revealForm);
-// Typing Animation
-const typingElement = document.getElementById("typing-text");
-
-if (typingElement) {
-
+/* ---- Typing Animation ---- */
+const typingEl = document.getElementById("typing-text");
+if (typingEl) {
   const words = [
     "Aadhaar & PAN Services",
     "Passport & Visa Assistance",
     "Licensed Currency Exchange",
     "GST & Income Tax Filing",
-    "Business Registration Services"
+    "Business Registration Services",
+    "DSC, IEC & Trademark Services"
   ];
 
-  let wordIndex = 0;
-  let charIndex = 0;
-  let isDeleting = false;
+  let wordIdx = 0, charIdx = 0, deleting = false;
 
-  function typeEffect() {
-    const currentWord = words[wordIndex];
-    
-    if (isDeleting) {
-      typingElement.textContent = currentWord.substring(0, charIndex--);
-    } else {
-      typingElement.textContent = currentWord.substring(0, charIndex++);
+  function type() {
+    const word = words[wordIdx];
+    typingEl.textContent = deleting
+      ? word.substring(0, charIdx--)
+      : word.substring(0, charIdx++);
+
+    let speed = deleting ? 45 : 75;
+
+    if (!deleting && charIdx === word.length + 1) {
+      speed = 1400;
+      deleting = true;
+    } else if (deleting && charIdx === 0) {
+      deleting = false;
+      wordIdx = (wordIdx + 1) % words.length;
+      speed = 350;
     }
 
-    let typingSpeed = isDeleting ? 50 : 80;
-
-    if (!isDeleting && charIndex === currentWord.length) {
-      typingSpeed = 1200; // pause at end
-      isDeleting = true;
-    } else if (isDeleting && charIndex === 0) {
-      isDeleting = false;
-      wordIndex = (wordIndex + 1) % words.length;
-      typingSpeed = 300;
-    }
-
-    setTimeout(typeEffect, typingSpeed);
+    setTimeout(type, speed);
   }
 
-  typeEffect();
+  type();
 }
 
+/* ---- Active nav link ---- */
+const currentPage = window.location.pathname.split("/").pop() || "index.html";
+document.querySelectorAll("nav a").forEach(a => {
+  const href = a.getAttribute("href");
+  if (href === currentPage) a.classList.add("active");
+});
