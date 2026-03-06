@@ -4,19 +4,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- SEO Meta Tags -->
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b1628'/%3E%3Ctext x='32' y='44' font-family='Arial Black,sans-serif' font-size='26' font-weight='900' fill='%23e8a317' text-anchor='middle'%3EWD%3C/text%3E%3C/svg%3E">
+
   <title>Our Services | Warsi Online Document — East Delhi</title>
-  <meta name="description" content="Complete list of 55+ services at Warsi Online Document, East Delhi: Aadhaar, PAN, Passport, Visa, Driving License, RC Transfer, Currency Exchange, GST, ITR, Company Registration, DSC, IEC, Trademark, FSSAI & more.">
+  <meta name="description" content="Complete list of 55+ services at Warsi Online Document, East Delhi: Aadhaar, PAN, Passport, Visa, Driving License, RC Transfer, Currency Exchange, GST, ITR, Company Registration, DSC, IEC, Trademark, FSSAI &amp; more.">
   <meta name="keywords" content="aadhaar card service east delhi, PAN card east delhi, passport service krishna nagar, visa assistance east delhi, currency exchange khureji, GST filing east delhi, company registration east delhi, DSC digital signature delhi, trademark registration east delhi, FSSAI east delhi">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://warsi-online-document.com/services.html">
+  <link rel="canonical" href="https://warsionlinedocument.onrender.com/services.html">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Complete Services — Warsi Online Document">
-  <meta property="og:description" content="55+ government, travel, banking, forex & business services in East Delhi. Transparent pricing, 10+ years experience.">
+  <meta property="og:title" content="Complete Services — Warsi Online Document East Delhi">
+  <meta property="og:description" content="55+ government, travel, banking, forex &amp; business services in East Delhi. Transparent pricing, 10+ years experience.">
   <meta property="og:type" content="website">
+  <meta property="og:image" content="https://warsionlinedocument.onrender.com/og-image.jpg">
 
-  <!-- Structured Data -->
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Complete Services — Warsi Online Document East Delhi">
+  <meta name="twitter:description" content="55+ government, travel, banking, forex &amp; business services in East Delhi.">
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://warsionlinedocument.onrender.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://warsionlinedocument.onrender.com/services.html"
+      }
+    ]
+  }
+  </script>
+
+  <!-- ItemList Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -36,17 +66,29 @@
   }
   </script>
 
+  <!-- Fonts & Preload -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap">
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- ===== LOADING OVERLAY ===== -->
+<div id="loadingOverlay">
+  <div class="loading-logo">Warsi <span>Online</span> Document</div>
+  <div class="loading-sub">East Delhi's Trusted Service Center</div>
+  <div class="loading-spinner"></div>
+</div>
+
 <header>
   <div class="container navbar">
     <div class="logo">Warsi <span>Online</span> Document<span class="logo-sub">East Delhi's Trusted Service Center</span></div>
-    <nav aria-label="Main navigation">
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="navMenu" aria-label="Main navigation">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="services.html" class="active">Services</a>
@@ -55,10 +97,11 @@
     </nav>
   </div>
 </header>
+<div class="nav-overlay" id="navOverlay"></div>
 
 <div class="service-ticker" aria-hidden="true">
   <div class="ticker-track">
-    ✈ Air Ticket Booking &nbsp;•&nbsp; 🌍 Visa Assistance &nbsp;•&nbsp; 💳 Credit Card Swipe Accepted &nbsp;•&nbsp; 💱 Licensed Currency Exchange &nbsp;•&nbsp; 📑 GST & ITR Filing &nbsp;•&nbsp; 🏢 Company Registration &nbsp;•&nbsp; 🖊 Digital Signature (DSC) &nbsp;•&nbsp; 🌐 IEC Code Registration &nbsp;•&nbsp; ™ Trademark Registration &nbsp;•&nbsp; 🍽 FSSAI Registration &nbsp;•&nbsp; 🧾 Professional Tax Registration &nbsp;•&nbsp; 🛂 Immigration Consultancy &nbsp;•&nbsp;
+    ✈ Air Ticket Booking &nbsp;•&nbsp; 🌍 Visa Assistance &nbsp;•&nbsp; 💳 Credit Card Swipe Accepted &nbsp;•&nbsp; 💱 Licensed Currency Exchange &nbsp;•&nbsp; 📑 GST &amp; ITR Filing &nbsp;•&nbsp; 🏢 Company Registration &nbsp;•&nbsp; 🖊 Digital Signature (DSC) &nbsp;•&nbsp; 🌐 IEC Code Registration &nbsp;•&nbsp; ™ Trademark Registration &nbsp;•&nbsp; 🍽 FSSAI Registration &nbsp;•&nbsp; 🧾 Professional Tax Registration &nbsp;•&nbsp; 🛂 Immigration Consultancy &nbsp;•&nbsp;
   </div>
 </div>
 
@@ -76,7 +119,7 @@
 </section>
 
 <!-- ===== GOVERNMENT DOCUMENT SERVICES ===== -->
-<section class="section bg-pattern" aria-labelledby="gov-heading">
+<section id="aadhaar-pan" class="section bg-pattern" aria-labelledby="gov-heading">
   <div class="container">
     <div class="cat-header">
       <i class="fa-solid fa-id-card"></i>
@@ -90,7 +133,7 @@
         <ul>
           <li>New Aadhaar Enrollment</li>
           <li>Name / Address / Mobile Update</li>
-          <li>DOB & Father Name Correction</li>
+          <li>DOB &amp; Father Name Correction</li>
           <li>Biometric Update</li>
           <li>Aadhaar PVC Card Printing</li>
         </ul>
@@ -113,7 +156,7 @@
         <h3>Voter ID Services</h3>
         <ul>
           <li>New Voter ID Apply</li>
-          <li>Name & Address Change</li>
+          <li>Name &amp; Address Change</li>
           <li>Voter Transfer</li>
           <li>Voter PVC Card Printing</li>
         </ul>
@@ -134,7 +177,7 @@
 
       <article class="service-card">
         <div class="card-icon"><i class="fa-solid fa-motorcycle"></i></div>
-        <h3>RC & Vehicle Services</h3>
+        <h3>RC &amp; Vehicle Services</h3>
         <ul>
           <li>RC Transfer (Car / Bike)</li>
           <li>Second Owner Transfer</li>
@@ -149,11 +192,11 @@
 </section>
 
 <!-- ===== TRAVEL & VISA ===== -->
-<section class="section bg-white" aria-labelledby="travel-heading">
+<section id="passport-visa" class="section bg-white" aria-labelledby="travel-heading">
   <div class="container">
     <div class="cat-header">
       <i class="fa-solid fa-plane-departure"></i>
-      <h2 id="travel-heading">Travel & Visa Services</h2>
+      <h2 id="travel-heading">Travel &amp; Visa Services</h2>
     </div>
     <div class="services-grid">
 
@@ -182,10 +225,10 @@
 
       <article class="service-card">
         <div class="card-icon"><i class="fa-solid fa-ticket"></i></div>
-        <h3>Ticket & Travel Assistance</h3>
+        <h3>Ticket &amp; Travel Assistance</h3>
         <ul>
           <li>Train Ticket Booking</li>
-          <li>Flight Tickets — Domestic & International</li>
+          <li>Flight Tickets — Domestic &amp; International</li>
           <li>Hotel Booking</li>
           <li>Travel Insurance Assistance</li>
         </ul>
@@ -196,11 +239,11 @@
 </section>
 
 <!-- ===== FOREX ===== -->
-<section class="section bg-navy-mid" aria-labelledby="forex-heading">
+<section id="currency-exchange" class="section bg-navy-mid" aria-labelledby="forex-heading">
   <div class="container">
     <div class="cat-header">
       <i class="fa-solid fa-money-bill-transfer"></i>
-      <h2 id="forex-heading">Licensed Forex & Money Transfer</h2>
+      <h2 id="forex-heading">Licensed Forex &amp; Money Transfer</h2>
     </div>
     <div class="forex-badge">
       <i class="fa-solid fa-shield-halved"></i>
@@ -235,11 +278,11 @@
 </section>
 
 <!-- ===== BANKING ===== -->
-<section class="section bg-pattern" aria-labelledby="bank-heading">
+<section id="banking" class="section bg-pattern" aria-labelledby="bank-heading">
   <div class="container">
     <div class="cat-header">
       <i class="fa-solid fa-building-columns"></i>
-      <h2 id="bank-heading">Banking & Payment Services</h2>
+      <h2 id="bank-heading">Banking &amp; Payment Services</h2>
     </div>
     <div class="services-grid">
 
@@ -271,17 +314,17 @@
 </section>
 
 <!-- ===== BUSINESS & TAX ===== -->
-<section class="section bg-white" aria-labelledby="biz-heading">
+<section id="gst-filing" class="section bg-white" aria-labelledby="biz-heading">
   <div class="container">
     <div class="cat-header">
       <i class="fa-solid fa-briefcase"></i>
-      <h2 id="biz-heading">Business & Tax Services</h2>
+      <h2 id="biz-heading">Business &amp; Tax Services</h2>
     </div>
     <div class="services-grid">
 
       <article class="service-card">
         <div class="card-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
-        <h3>GST & Income Tax Services</h3>
+        <h3>GST &amp; Income Tax Services</h3>
         <ul>
           <li>GST Registration Assistance</li>
           <li>Income Tax Return Filing</li>
@@ -289,7 +332,7 @@
         </ul>
       </article>
 
-      <article class="service-card">
+      <article id="company-registration" class="service-card">
         <div class="card-icon"><i class="fa-solid fa-building"></i></div>
         <h3>Business Registration Services</h3>
         <ul>
@@ -305,11 +348,11 @@
 </section>
 
 <!-- ===== ONLINE & CERTIFICATES ===== -->
-<section class="section bg-pattern" aria-labelledby="cert-heading">
+<section id="certificates" class="section bg-pattern" aria-labelledby="cert-heading">
   <div class="container">
     <div class="cat-header">
       <i class="fa-solid fa-file-lines"></i>
-      <h2 id="cert-heading">Online & Certificate Services</h2>
+      <h2 id="cert-heading">Online &amp; Certificate Services</h2>
     </div>
     <div class="services-grid">
 
@@ -325,7 +368,7 @@
 
       <article class="service-card">
         <div class="card-icon"><i class="fa-solid fa-scroll"></i></div>
-        <h3>Certificate & Affidavit Services</h3>
+        <h3>Certificate &amp; Affidavit Services</h3>
         <ul>
           <li>Birth Certificate</li>
           <li>Death Certificate</li>
@@ -342,11 +385,11 @@
 </section>
 
 <!-- ===== COMPLIANCE & REGISTRATION ===== -->
-<section class="section bg-white" aria-labelledby="comp-heading">
+<section id="dsc-iec-trademark" class="section bg-white" aria-labelledby="comp-heading">
   <div class="container">
     <div class="cat-header">
       <i class="fa-solid fa-scale-balanced"></i>
-      <h2 id="comp-heading">Compliance & Registration Services</h2>
+      <h2 id="comp-heading">Compliance &amp; Registration Services</h2>
     </div>
     <div class="services-grid">
 
@@ -355,8 +398,8 @@
         <h3>Digital Signature Certificate (DSC)</h3>
         <ul>
           <li>Class 3 DSC</li>
-          <li>Individual & Company DSC</li>
-          <li>Renewal & Reissue</li>
+          <li>Individual &amp; Company DSC</li>
+          <li>Renewal &amp; Reissue</li>
         </ul>
       </article>
 
@@ -376,7 +419,7 @@
         <ul>
           <li>Trademark Search</li>
           <li>Application Filing</li>
-          <li>Renewal & Objection Handling</li>
+          <li>Renewal &amp; Objection Handling</li>
         </ul>
       </article>
 
@@ -415,11 +458,11 @@
 
 <!-- CTA -->
 <section class="section bg-navy" style="padding:60px 0;">
-  <div class="container" style="text-align:center;">
-    <span class="section-label" style="display:block;">Ready to Get Started?</span>
+  <div class="container text-center">
+    <span class="section-label" style="display:block; text-align:center;">Ready to Get Started?</span>
     <h2 style="color:white; margin-bottom:14px;">Contact Us for Any Service</h2>
     <p style="color:rgba(255,255,255,0.5); margin-bottom:32px;">Visit us at 241, Main Parwana Road, Khureji Khas, Krishna Nagar, East Delhi – 110051</p>
-    <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+    <div class="flex-gap-16 justify-center">
       <a href="tel:8860153142" class="btn btn-primary"><i class="fa-solid fa-phone"></i> Call Now</a>
       <a href="https://wa.me/918860153142" target="_blank" rel="noopener" class="btn btn-outline"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
     </div>
@@ -447,10 +490,10 @@
       <div class="footer-col">
         <h4>Top Services</h4>
         <ul>
-          <li><a href="services.html">Aadhaar & PAN</a></li>
-          <li><a href="services.html">Passport & Visa</a></li>
-          <li><a href="services.html">Currency Exchange</a></li>
-          <li><a href="services.html">GST & ITR</a></li>
+          <li><a href="services.html#aadhaar-pan">Aadhaar &amp; PAN</a></li>
+          <li><a href="services.html#passport-visa">Passport &amp; Visa</a></li>
+          <li><a href="services.html#currency-exchange">Currency Exchange</a></li>
+          <li><a href="services.html#gst-filing">GST &amp; ITR</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -476,11 +519,11 @@
   <div class="modal-box">
     <span class="close-btn" onclick="closeModal()">&times;</span>
     <h2>Service Inquiry</h2>
-    <p>Fill in your details and we will contact you shortly.</p>
-    <form>
-      <input type="text" placeholder="Full Name" required>
-      <input type="tel" placeholder="Mobile Number" required>
-      <select required>
+    <p>Fill in your details and we will contact you on WhatsApp shortly.</p>
+    <form id="modalForm">
+      <input type="text" id="modal-name"    placeholder="Full Name"     required aria-label="Full Name">
+      <input type="tel"  id="modal-mobile"  placeholder="Mobile Number" required aria-label="Mobile Number">
+      <select            id="modal-service"                              required aria-label="Select Service">
         <option value="">Select Service</option>
         <option>Aadhaar / PAN Service</option>
         <option>Passport / Visa</option>
@@ -492,13 +535,14 @@
         <option>Immigration Consultancy</option>
         <option>Other</option>
       </select>
-      <textarea placeholder="Additional Details" rows="3"></textarea>
-      <button type="submit" class="btn btn-primary" style="width:100%; margin-top:10px; justify-content:center;">Submit Inquiry</button>
+      <textarea id="modal-details" placeholder="Additional Details" rows="3"></textarea>
+      <button type="submit" class="btn btn-primary btn-full" style="margin-top:10px;">
+        <i class="fa-brands fa-whatsapp"></i> Send via WhatsApp
+      </button>
     </form>
   </div>
 </div>
 
-<script src="script.js"></script>
+<script src="script.js" defer></script>
 </body>
 </html>
-
